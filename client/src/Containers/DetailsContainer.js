@@ -22,6 +22,8 @@ const mapStateToProps = (state, ownProps) => {
   const selectedProject = state.projects.find(project => project.id === +ownProps.match.params.id)
   if (selectedProject) {
     return { selectedProject }
+  } else {
+    return {}
   }
 }
 

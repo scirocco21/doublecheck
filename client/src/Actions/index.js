@@ -11,7 +11,7 @@ export function addProject(project) {
 export function fetchProjects() {
   return (dispatch) => {
     return fetch('/api/projects')
-    .then(response => response.json())
+    .then((response) => response.json())
     .then(projects => dispatch({type: "FETCH_PROJECTS", payload: projects}))
   }
 }
